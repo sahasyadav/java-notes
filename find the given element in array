@@ -1,0 +1,33 @@
+import java.util.*;
+public class main{
+    public static void find(int a[],int n,int key){
+        int i=0;
+        while(i<n){
+            if(key==a[i]){
+                System.out.println(key+"is present int the array at "+i+"th position ");
+                break;
+            }
+            else if(i==n-1){
+                System.out.println("element is not exist in the array");
+                break;
+                
+            }
+            else {
+                i++;
+            } 
+        }
+        
+    }
+    public static void main(String[] args){
+        System.out.println("enter the size of array");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int [n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        System.out.println("enter the element which u need to find");
+        int key=sc.nextInt();
+        find(a, n,key);
+    }
+}
